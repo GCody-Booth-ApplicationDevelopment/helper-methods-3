@@ -1,0 +1,19 @@
+<% foo.errors.full_messages.each do |message| %>
+  <p style="color: red;"><%= message %></p>
+<% end %>
+
+<%= form_with model: foo do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :dob %>
+    <%= form.date_field :dob %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
